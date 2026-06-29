@@ -10,7 +10,7 @@ The idea is simple: instead of training a full 3D Gaussian Splatting model from 
 
 
 
-\## What this project does
+## What this project does
 
 
 
@@ -18,17 +18,17 @@ Given a mesh, the converter:
 
 
 
-\* reads mesh primitives from a `.glb` or `.gltf` file;
+* reads mesh primitives from a `.glb` or `.gltf` file;
 
-\* extracts positions, normals, colors, UVs and material color/texture when available;
+* extracts positions, normals, colors, UVs and material color/texture when available;
 
-\* converts mesh primitives into triangles;
+* converts mesh primitives into triangles;
 
-\* samples points on triangle surfaces;
+* samples points on triangle surfaces;
 
-\* assigns each sampled point a color, opacity, scale and rotation;
+* assigns each sampled point a color, opacity, scale and rotation;
 
-\* writes the result as a Gaussian Splat-style PLY file.
+* writes the result as a Gaussian Splat-style PLY file.
 
 
 
@@ -58,7 +58,7 @@ By default, the file is written as binary little-endian PLY because this is the 
 
 
 
-\## What this project is not
+## What this project is not
 
 
 
@@ -70,7 +70,7 @@ It does not optimize Gaussians from images, camera poses, or view-dependent appe
 
 
 
-\## Install
+## Install
 
 
 
@@ -82,7 +82,7 @@ npm install
 
 
 
-\## Usage
+## Usage
 
 
 
@@ -106,7 +106,7 @@ node src/meshToSplat.js samples/model.glb samples/model.ply --maxSplats 100000 -
 
 
 
-\## Options
+## Options
 
 
 
@@ -128,7 +128,7 @@ node src/meshToSplat.js samples/model.glb samples/model.ply --maxSplats 100000 -
 
 
 
-\## How the conversion works
+## How the conversion works
 
 
 
@@ -154,7 +154,7 @@ For each generated splat:
 
 
 
-\## Notes about quality
+## Notes about quality
 
 
 
@@ -182,7 +182,7 @@ This is still only a geometric approximation. It should not be compared directly
 
 
 
-\## Project structure
+## Project structure
 
 
 
@@ -212,19 +212,19 @@ Generated `.ply`, `.glb`, and `.gltf` files are intentionally ignored by Git.
 
 
 
-\## Possible next steps
+## Possible next steps
 
 
 
-\* test the generated PLY with Spark;
+* test the generated PLY with Spark;
 
-\* run Spark `build-lod` on the PLY to generate RAD;
+* run Spark `build-lod` on the PLY to generate RAD;
 
-\* compare direct PLY loading with RAD loading;
+* compare direct PLY loading with RAD loading;
 
-\* improve sampling to reduce holes and noise;
+* improve sampling to reduce holes and noise;
 
-\* estimate splat radius from local neighborhood density instead of triangle area only.
+* estimate splat radius from local neighborhood density instead of triangle area only.
 
 
 
