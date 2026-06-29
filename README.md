@@ -1,17 +1,13 @@
 # mesh-to-splat-prototype
 
 
-
 Small Node.js experiment to convert a mesh file (`.glb` / `.gltf`) into a Gaussian Splat-style `.ply` file.
 
 
-
-The idea is simple: instead of training a full 3D Gaussian Splatting model from images, this script samples points directly on the surface of a mesh and turns them into small oriented Gaussians. The result is not meant to be photorealistic. It is mainly useful for testing a mesh-to-splat pipeline, experimenting with Spark-compatible PLY files, and later trying RAD generation.
-
+The idea is simple: instead of training a full 3D Gaussian Splatting model from images, this script samples points directly on the surface of a mesh and turns them into small oriented Gaussians. The result is not meant to be photorealistic. It is mainly useful for testing a mesh to splat pipeline, experimenting with Spark compatible PLY files, and later trying RAD generation.
 
 
 ## What this project does
-
 
 
 Given a mesh, the converter:
@@ -31,9 +27,7 @@ Given a mesh, the converter:
 * writes the result as a Gaussian Splat-style PLY file.
 
 
-
 The output PLY contains the fields expected by common Gaussian Splat loaders:
-
 
 
 ```text
@@ -179,37 +173,6 @@ node src/meshToSplat.js input.glb output.ply --maxSplats 300000 --opacity 5.0 --
 
 
 This is still only a geometric approximation. It should not be compared directly with a real trained 3DGS model.
-
-
-
-## Project structure
-
-
-
-```text
-
-src/
-
-&#x20; math.js
-
-&#x20; meshToSplat.js
-
-&#x20; texture.js
-
-&#x20; writeGaussianPly.js
-
-
-
-samples/
-
-&#x20; README.md
-
-```
-
-
-
-Generated `.ply`, `.glb`, and `.gltf` files are intentionally ignored by Git.
-
 
 
 ## Possible next steps
