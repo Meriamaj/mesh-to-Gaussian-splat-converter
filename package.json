@@ -1,0 +1,21 @@
+{
+  "name": "mesh-to-splat-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Node.js prototype for geometric mesh-to-Gaussian-splat PLY conversion.",
+  "bin": {
+    "mesh-to-splat": "./src/meshToSplat.js"
+  },
+  "scripts": {
+    "convert": "node src/meshToSplat.js"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.4.0",
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
