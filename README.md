@@ -1,4 +1,4 @@
-\# mesh-to-splat-prototype
+# mesh-to-splat-prototype
 
 
 
